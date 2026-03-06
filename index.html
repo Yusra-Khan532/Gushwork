@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
 
     <title>Gushwork Assignment</title>
 </head>
@@ -63,7 +64,11 @@
                     <!--LEFT COLUMN FROM HERE-->
                     <div class="product-gallery" aria-label="Product image gallery"> 
                         <figure class="product-gallery__main">
-                            <img id="main-product-image" src="assets/hero.png" alt="HDPE pipe coil installed on site">
+                            <div class="product-gallery__image-area">
+                                <img id="main-product-image" src="assets/hero.png" alt="HDPE pipe coil installed on site">
+                                <div class="zoom-lens" aria-hidden="true"></div>
+                            </div>
+                            
                             <button type="button" class="left-control" aria-label="Previous image"></button>
                             <button type="button" class="right-control" aria-label="Next image"></button>
                         </figure>
@@ -139,6 +144,7 @@
 
                     </div>
                     <!--RIGHT COLUMN ENDS HERE-->
+                    <div class="zoom-result"></div>
 
                 </div>
 
@@ -979,6 +985,10 @@
         </div>
     </footer>
     <!--FOOTER ENDS HERE-->
+
+    <script src="./script.js" defer> </script>
     
 </body>
+
+ 
 </html>
