@@ -200,8 +200,9 @@ header .container{
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 4 / 3;   /* adjust if figma differs */
+  aspect-ratio: 4 / 3;   
   object-fit: cover;
+  transition: transform 0.2s ease;
 }
 
 /* arrows */
@@ -222,7 +223,7 @@ header .container{
 .left-control{ left: 18px; }
 .right-control{ right: 18px; }
 
-/* add arrow icons via CSS (so no extra markup needed) */
+
 .left-control::before,
 .right-control::before{
   content: "";
@@ -272,7 +273,7 @@ header .container{
   object-fit: cover;
 }
 
-/* focus styles (important for interview) */
+
 .thumbnail-btn:focus-visible,
 .left-control:focus-visible,
 .right-control:focus-visible{
@@ -711,7 +712,7 @@ header .container{
   overflow: hidden;
 }
 
-/* remove default disclosure marker */
+
 .faq__question::-webkit-details-marker{
   display: none;
 }
@@ -1002,7 +1003,7 @@ header .container{
 /* card */
 .apps-card{
   position: relative;
-  flex: 0 0 calc((100% - 40px) / 3); /* 3 cards desktop */
+  flex: 0 0 calc((100% - 40px) / 3); 
   min-height: 420px;
   border-radius: 24px;
   overflow: hidden;
@@ -1055,7 +1056,7 @@ header .container{
   }
 
   .apps-card{
-    flex: 0 0 calc((100% - 20px) / 2); /* 2 visible cards */
+    flex: 0 0 calc((100% - 20px) / 2); 
     min-height: 380px;
   }
 }
