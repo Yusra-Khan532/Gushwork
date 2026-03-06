@@ -3,7 +3,7 @@
 //then clamps the lens witj the cursor, and the preview gets updated by using the same background image just
 //the zoomed version of it
 
-
+//zoom feature
 const imageArea = document.querySelector(".product-gallery__image-area");
 const mainImage = document.querySelector("#main-product-image");
 const lens = document.querySelector(".zoom-lens");
@@ -55,4 +55,33 @@ function moveLens(event) {
   const bgY = -(lensY * zoomLevel);
 
   result.style.backgroundPosition = `${bgX}px ${bgY}px`;
+}
+
+
+
+//sticky header
+
+const stickyBar = document.getElementById("stickyProductBar");
+const heroSection = document.querySelector(".hero-section");
+
+let lastScrollY = window.scrollY;
+
+if (stickyBar && heroSection) {
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    const heroHeight = heroSection.offsetHeight;
+
+    const isScrollingDown = currentScrollY > lastScrollY;
+    const isPastHero = currentScrollY > heroHeight;
+
+    if (isPastHero && isScrollingDown) {
+      stickyBar.classList.add("is-visible");
+      stickyBar.setAttribute("aria-hidden", "false");
+    } else if (!isScrollingDown) {
+      stickyBar.classList.remove("is-visible");
+      stickyBar.setAttribute("aria-hidden", "true");
+    }
+
+    lastScrollY = currentScrollY;
+  });
 }
